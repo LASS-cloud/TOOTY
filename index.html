@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadidiatou ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.15);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        max-width: 360px;
+        animation: fadeIn 2s;
+        position: relative;
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .heart {
+        font-size: 42px;
+        animation: beat 1s infinite;
+    }
+
+    .music {
+        margin-top: 15px;
+        font-size: 14px;
+        opacity: 0.9;
+    }
+
+    
+
+    @keyframes beat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+	
+    }
+	
+	.music-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #ff4f81;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    background: #ff4f81;
+    color: white;
+}
+
+	
+</style>
+</head>
+
+<body>
+
+<!-- Musique Dadju – Reine -->
+
+
+<div class="card">
+    <div class="heart">❤️</div>
+
+    <h1>KADIDIATOU BARRY</h1>
+
+    <p>
+        Tu es ma reine, mon évidence.<br>
+        Même quand on se dispute, mon cœur ne doute jamais de toi.<br><br>
+        Tu es mon calme dans le bruit,<br>
+        mon sourire dans les moments sombres.<br><br>
+        Je te choisis aujourd’hui,<br>
+        demain et encore après.
+    </p>
+
+    <p><strong>— Boubacar</strong></p>
+
+    <div class="music">
+        🎶 Dadju — Reine
+        <br>
+        (Appuie sur ▶️ pour lancer la musique)
+    </div>
+	<button onclick="playMusic()" class="music-btn">
+    ▶️ Lancer la musique
+</button>
+
+	
+</div>
+
+<script>
+function playMusic() {
+    document.getElementById("music").play();
+}
+</script>
+
+
+</body>
+
+<audio id="music" loop>
+    <source src="DADJU - Reine.mp3" type="audio/mpeg">
+</audio>
+
+</html>
