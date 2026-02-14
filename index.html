@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>~~Tooty ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Animation fond doux */
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 10%);
+    background-size: 50px 50px;
+    animation: moveBg 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes moveBg {
+    from { transform: translate(0,0); }
+    to { transform: translate(-50px,-50px); }
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    max-width: 380px;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.heart {
+    font-size: 45px;
+    animation: beat 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.music-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #ff4f81;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    background: #ff4f81;
+    color: white;
+}
+
+.signature {
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.scroll-text {
+    height: 160px;
+    overflow: hidden;
+}
+
+.scroll-text p {
+    animation: scrolldown 55s linear infinite;
+}
+
+@keyframes scrolldown {
+    0% { transform: translateY(25%); }
+    100% { transform: translateY(-100%); }
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+	 <h1>A toi mon coeur ~~Tooty💕</h1>
+    <div class="heart" onclick="playMusic()">❤️</div>
+	<div class="scroll-text">
+    <p> Tout dabord appuie sur mon coeur. <br><br><br><br>
+	
+	
+
+		En ce jour où l’amour éclaire le monde,<br>
+		Mon cœur ne cherche qu’une seconde,<br><br>
+		Pour te dire sans détour,<br>
+		Que tu es ma plus belle histoire d’amour.<br><br>
+
+		Ton sourire efface mes chagrins,<br>
+		Ta voix apaise mon coeur,<br><br>
+		Même dans nos silences parfois agités,<br>
+		Mon cœur, lui, ne cesse jamais de t’aimer.<br><br>
+
+		Tu es mon calme quand <br> tout s’emballe,<br>
+		Ma lumière quand <br>le doute m’assaille,<br><br>
+		Le battement doux qui rythme mes jours,<br>
+		La promesse d’un toujours, <br><br>
+		
+		Même quand on se dispute,<br> mon cœur ne doute jamais de toi.<br><br>
+        Tu es mon calme dans le bruit,
+        mon sourire dans les moments sombres.<br><br>
+		Malgré mes défaut,<br>
+		tu es resté a mes cotés <br>
+		Alors sache que <br>
+
+		Je te choisis sans hésitation,<br>
+		Avec force, foi et passion,<br><br>
+		Aujourd’hui, demain et pour la vie,<br>
+		Parce que mon bonheur… <br>c’est toi, ma chérie. ❤️<br><br>
+		Je t'aime.❤️
+	
+	
+	
+    </p>
+
+    
+
+</div>
+
+<!-- AUDIO DOIT ÊTRE DANS LE BODY -->
+<audio id="music" loop>
+    <source src="DADJU - Reine.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playMusic() {
+    var music = document.getElementById("music");
+    music.play();
+}
+</script>
+<footer>
+        <p> <div class="signature">
+        Fait par ton chéri Lassina 💕
+    </div>
+</p>
+    </footer>
+</body>
+</html>
